@@ -18,6 +18,7 @@ body {
     border-left: 10px solid rgb(177, 177, 177);
     overflow-x: hidden;
     transition: all 0.5s;
+    
 }
 
 .navigation:hover {

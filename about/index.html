@@ -6,24 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>自己紹介</title>
     <link rel="stylesheet" href="../top/css/reset.css" />
-    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
     <header>
-        <nav>
+        <div class="navigation">
             <ul>
-                <li><a href="../index.html">Top</a></li>
-                <li><a href="./index.html">about</a></li>
-                <li><a href="../contact/index.html">contact</a></li>
-                <li><a href="../snoopy/index.html">Love SNOOPY</a></li>
-                <li><a href="../tango/index.html">Home Town</a></li>
+                <li class="list">
+                    <a href="../index.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Top</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="./index.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">自己紹介</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="../contact/index.html">
+                        <span class="icon"><ion-icon name="send-outline"></ion-icon></span>
+                        <span class="title">お問い合わせ</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="../snoopy/index.html">
+                        <span class="icon"><ion-icon name="heart-outline"></ion-icon></span>
+                        <span class="title">Love SNOOPY</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="../tango/index.html">
+                        <span class="icon"><ion-icon name="sunny-outline"></ion-icon></span>
+                        <span class="title">夕日ヶ浦</span>
+                    </a>
+                </li>
             </ul>
-        </nav>
-        <ul>
-            <li><a href="https://www.instagram.com/fhazuki2004/" target="_blank">instagaram</a></li>
-            <li><a href="https://twitter.com/AssassinMoon821" target="_blank">twitter</a></li>
-        </ul>
+        </div>
     </header>
     <main>
         <h2>自己紹介</h2>
@@ -52,6 +73,9 @@
             </ul>
         </nav>
     </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
