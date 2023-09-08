@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../top/css/reset.css">
-    <link rel="stylesheet" href="../top/css/style.css">
+    <link rel="stylesheet" href="./css/side.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Love SNOOPY</title>
 </head>
 <body>
     <header>
     </header>
-    <main>
-        <section class="side">
-            <div class="navigation">
-                <ul>
-                    <li class="list">
-                        <a href="../index.html">
-                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                            <span class="title">Top</span>
+    <div class="container">
+    <div class="side">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="../index.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Top</span>
                     </a>
                 </li>
                 <li class="list">
@@ -46,15 +48,71 @@
                 </li>
             </ul>
         </div>
-    </section>
-    <section class="main-content">
-        <h2>I Love SNOOPY</h2>
-    </section>
+    </div>
+    <main>
+        <section class="sec-01">
+            <div class="container-2">
+                <h1 class="main-title">I Love SNOOPY !</h1>
+                <div class="content">
+                    <div class="image">
+                        <img src="./img/usj.JPG" alt="">
+                    </div>
+                    <div class="info">
+                        <h3 class="info-title">好きなキャラクター！</h3>
+                        <p>
+                            小さいころの写真しかありませんが、スヌーピーが大好きです！<br>
+                            昔はよくUSJに行っていたので会えていましたが、<br> 
+                            最近は全然あえていません(´;ω;｀)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-02">
+            <div class="container-2">
+                <div class="content">
+                    <div class="info">
+                        <h4 class="info-title">趣味はスヌーピーのグッズを集めること！</h4>
+                        <p>
+                            大きいぬいぐるみから小さいぬいぐるみまで、<br>
+                            家中にスヌーピーがいます！<br>
+                            普段は3人のスヌーピーと一緒に動き回ってます！！
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="./img/walk.JPG" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-03">
+            <div class="container-2">
+                <div class="content">
+                    <div class="image">
+                        <img src="./img/club.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h4 class="info-title">PEANUTS Friends Club会員です</h4>
+                        <p>
+                            この会員に入るだけで色々な特典がもらえる！<br>
+                            PEANUTS Friends Clubの会員になってます！<br>
+                            皆さんも是非！！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
     </main>
+</div>
     <footer>
     </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

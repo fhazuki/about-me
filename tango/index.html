@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Home Town</title>
     <link rel="stylesheet" href="../top/css/reset.css">
-    <link rel="stylesheet" href="../top/css/style.css">
+    <link rel="stylesheet" href="./css/side.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-    </header>
-    <main>
-        <section class="side">
-            <div class="navigation">
-                <ul>
+    <div class="container">
+    <div class="side">
+        <div class="navigation">
+            <ul>
                 <li class="list">
                     <a href="../index.html">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
@@ -46,16 +46,70 @@
                 </li>
             </ul>
         </div>
-    </section>
-    <section class="main-content">
-        <h2>My Home Town</h2>
-        <img src="img/yuhigaura.jpg" alt="">
-    </section>
-    </main>
-    <footer>
-    </footer>
+    </div>
+    <main>
+        <section class="sec-01">
+            <div class="container-2">
+                <h1 class="main-title">My Home Town</h1>
+                <h2 class="section-title">夕日がきれいな海</h2>
+                <div class="content">
+                    <div class="image">
+                        <img src="./img/yuhigaura.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3 class="info-title">夏は海水浴！！</h3>
+                        <p>
+                            全然海水浴の写真ではないですが、<br>
+                            とにかく海水がきれいです！<br>
+                            海の近くには旅館がたくさんあるので、<br>
+                            夏は観光客でにぎわってます！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="sec-02">
+            <div class="container-2">
+                <div class="content">
+                    <div class="info">
+                        <h4 class="info-title">フォトスポットもあります！</h4>
+                        <p>
+                            木のブランコ「ゆらり」が砂浜に設置されています！<br>
+                            自分で座ってもきれいな写真が撮れますが、タイミングが合えば、<br>
+                            夕日がブランコに座っている写真も撮ることができます！！
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="./img/yurari.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-03">
+            <div class="container-2">
+                <div class="content">
+                    <div class="image">
+                        <img src="./img/sanpo1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h4 class="info-title">夕方の散歩が楽しい！</h4>
+                        <p>
+                            ”夕日の路”という散歩向けの道があるので、<br>
+                            ひとりで歩くのはもちろん、<br>
+                            ペットと一緒に歩いても楽しめます！！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </main>
+</div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,221 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
     height: 100vh;
-    background-color: rgb(177, 177, 177);
+    width: 100%;
+    background: linear-gradient(#dedede,#818181);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu-button1{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgb(128, 128, 128);
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    /* 角丸の半径を設定 */
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s;
-}
-
-.menu-button2{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgb(128, 128, 128);
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    /* 角丸の半径を設定 */
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s;
-}
-
-.menu-button3{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgb(128, 128, 128);
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    /* 角丸の半径を設定 */
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s;
-}
-
-.menu-button4{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgb(128, 128, 128);
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    /* 角丸の半径を設定 */
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s;
-}
-
-.menu-button1:hover {
-    transform: scale(1.2, 1.2);
-    opacity: 0.7;
-}
-.menu-button2:hover {
-    transform: scale(1.2, 1.2);
-    opacity: 0.7;
-}
-.menu-button3:hover {
-    transform: scale(1.2, 1.2);
-    opacity: 0.7;
-}
-.menu-button4:hover {
-    transform: scale(1.2, 1.2);
-    opacity: 0.7;
-}
-
-.side {
-    position: absolute;
-    display: inline-block;
-    z-index: 2;
-}
-
-.navigation {
-    border: 2px solid rgb(128, 128, 128);
-    height: 100vh;
-    width: 70px;
+.loader {
     position: relative;
-    background-color: rgb(177, 177, 177);
-    box-shadow: 8px 0 0 rgb(128, 128, 128);
-    border-left: 10px solid rgb(177, 177, 177);
-    overflow-x: hidden;
-    transition: all 0.5s;
-    
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.navigation:hover {
-    width: 250px;
+
+.text {
+    margin-bottom: 25px;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
-.navigation ul {
+.loading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading .line-box {
+    padding: 2px;
+    width: 40%;
+    height: 20px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+}
+
+.loading .line-box .line {
+    height: 20px;
+    border-radius: 20px;
+    background: #67D291;
+    animation: loading 3s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.content-2 {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    padding-left: 100px;
+    transition: all 0.4s;
+    transition-delay: 0.3s;
+}
+
+.material-menu-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 40vw;
+    overflow: hidden;
+}
+
+.material-menu {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.material-btn {
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.material-btn.active:before {
+    transform: scale(18);
+}
+
+@media (min-height: 800px) {
+    .material-btn.active:before {
+        transform: scale(25);
+    }
+}
+
+.material-btn:active:before {
+    opacity: 0.75;
+}
+
+.material-btn:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    padding-top: 20px;
-    padding-left: 10px;
-}
-
-.navigation ul li {
-    list-style: none;
-    display: block;
-    width: 100%;
-    position: relative;
-    border-radius: 15px;
-}
-
-.navigation ul li:hover {
-    background-color: rgba(143, 143, 143, 0.422);
-}
-
-.navigation ul li.active {
-    background-color: rgb(128, 128, 128);
-}
-
-.navigation ul li.active::before {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -30px;
-    right: 0;
+    z-index: -1;
+    width: 75px;
+    height: 75px;
+    background: white;
     border-radius: 50%;
-    box-shadow: 15px 15px  rgb(128, 128, 128);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transform-origin: center 70%;
+    transform: scale(1);
+    transition: all 0.35s ease-out;
 }
 
-.navigation ul li.active::after {
-    content: "";
+.material-content {
+    padding: 10% 15%;
     position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
+    top: 0;
     right: 0;
-    border-radius: 50%;
-    box-shadow: 15px -15px  rgb(128, 128, 128);
 }
 
-.navigation ul li a {
-    text-decoration:    none;
+.material-content.active {
+    z-index: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+}
+
+nav li {
+    will-change: transform, opacity;
+    margin: 25px 0;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+nav li.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+nav li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+nav li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+nav li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+nav li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 3rem;
     color: black;
-    width: 100%;
-    display: flex;
-    position: relative;
+    font-weight: 300;
 }
 
-.navigation ul li a .icon {
-    display: block;
-    min-width: 45px;
-    height: 60px;
-    line-height: 70px;
-    text-align: center;
+.material-hamburger {
+    transition: all 0.3s ease-out;
 }
 
-.navigation ul li a .icon ion-icon {
-    font-size: 1.5rem;
+.material-hamburger .material-patty {
+    will-change: transform, opacity;
+    width: 32px;
+    height: 3px;
+    margin: 0 0 6px 0;
+    background: #333333;
+    opacity: 1;
+    transform: translate(0) rotate(0deg);
+    transition: all 0.2s ease-out;
 }
 
-.navigation ul li a .title {
-    padding-left: 10px;
-    height: 60px;
-    line-height: 60px;
-    white-space: nowrap;
+.material-hamburger .material-patty:last-child {
+    margin-bottom: 0;
 }
 
-.main {
-    background-color: rgb(128, 128, 128);
+.material-hamburger.material-close {
+    transform: rotate(-180deg);
 }
 
-.main-content {
-    position: absolute;
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 100px;
-    z-index: 1;
+.material-hamburger.material-close .material-patty:nth-child(1) {
+    transform: translate(-10px, 4px) rotate(-45deg) scale(0.5, 1);
 }
 
-.content {
-    display: inline;
-    text-align: center;
+.material-hamburger.material-close .material-patty:nth-child(3) {
+    transform: translate(-10px, -4px) rotate(45deg) scale(0.5, 1);
 }
 
-.footer {
-    position: absolute;
+main {
+    will-change: transform, opacity;
+    width: 80vw;
+    height: 100vh;
+    padding: 10vw;
+    overflow: hidden;
+    transition: all 0.35s ease-out;
 }
 
-.footer ul {
-    display: flex;
+main.active {
+    opacity: 0;
+    transform: translate(-700px, 0px);
 }
 
-.footer ul li {
-    padding: 0 15px;
-    line-height: 1.2;
-     /* color: #fff; */
-    text-transform: uppercase;
+main p {
+    color: white;
+    font-size: 4vw;
+    font-weight: 300;
+}
+
+main p .highlight {
+    background: white;
+    color: black;
+    font-size: 4vw;
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
 }

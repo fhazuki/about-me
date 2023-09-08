@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>お問い合わせ</title>
     <link rel="stylesheet" href="../top/css/reset.css" />
-    <link rel="stylesheet" href="../top/css/style.css" />
+    <link rel="stylesheet" href="./css/side.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
 </head>
 
 <body>
-    <header>
-    </header>
-    <main>
-        <section class="side">
+    <div class="container">
+        <header>
+        </header>
+        <div class="side">
             <div class="navigation">
                 <ul>
                     <li class="list">
@@ -48,36 +50,38 @@
                     </li>
                 </ul>
             </div>
-        </section>
-        <section class="main-content">
-            <div class="subtitle">
-                <h2>お問い合わせ</h2>
+        </div>
+        <main>
+            <div class="contact-form">
+                <p class="main-title">お問い合わせ</p>
+
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <input type="hidden" name="accessKey" value="01fea6a4-8949-418d-97ea-53c26ed6ff2b">
+                    <input type="hidden" name="subject" value="Test">
+                    <div class="item">
+                        <label class="label">お名前</label>
+                        <input type="text" class="inputs" name="name" required />
+                    </div>
+
+                    <div class="item">
+                        <label class="label">メールアドレス</label>
+                        <input type="email" class="inputs" name="email" />
+                    </div>
+
+                    <div class="item">
+                        <label class="label">内容</label>
+                        <textarea class="inputsf" placeholder="詳細をご記入ください。"></textarea>
+                    </div>
+
+                    <div class="button-area">
+                        <input type="submit" value="送信" />
+                        <input type="reset" value="リセット" />
+                    </div>
             </div>
-            <!-- 名前入力フォーム -->
-            <div class="form-group">
-                <label for="yourName" class="form-label">お名前</label>
-                <div>
-                    <input type="text" name="お名前" id="yourName" />
-                </div>
-            </div>
-    
-            <!-- メールアドレス入力フォーム -->
-            <div class="form-group">
-                <label for="yourEmail" class="form-label">E-mail</label>
-                <div>
-                    <input type="email" name="E-mail" id="yourEmail" />
-                </div>
-            </div>
-    
-            <!-- お問い合わせ内容入力フォーム -->
-            <div class="form-group">
-                <label for="yourIbquary" class="form-label">お問い合わせ内容</label>
-                <div>
-                    <textarea name="お問い合わせ内容" id="yourInquiry" cols="30" rows="10"></textarea>
-                </div>
-            </div>
-        </section>
+            </form>
+    </div>
     </main>
+    </div>
     <footer>
     </footer>
 

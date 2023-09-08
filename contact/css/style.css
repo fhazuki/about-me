@@ -2,112 +2,92 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    height: 100vh;
+    background: linear-gradient(#dedede,#818181);
 }
 
-.navigation {
-    border: 2px solid rgb(128, 128, 128);
-    height: 100vh;
-    width: 70px;
-    position: relative;
-    background-color: rgb(177, 177, 177);
-    box-shadow: 8px 0 0 rgb(128, 128, 128);
-    border-left: 10px solid rgb(177, 177, 177);
-    overflow-x: hidden;
-    transition: all 0.5s;
+.contact-form {
+    border: 1px solid #aaa;
+    padding: 50px 30px;
 }
 
-.navigation:hover {
-    width: 250px;
+.main-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.navigation ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-top: 20px;
+form {
+    width: 460px;
+    margin: 0 auto;
+}
+
+.item {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.label {
+    float: left;
+    margin-right: 20px;
+    width: 135px;
+    border-left: solid 3px black;
     padding-left: 10px;
 }
 
-.navigation ul li {
-    list-style: none;
-    display: block;
-    width: 100%;
-    position: relative;
-    border-radius: 15px;
+.inputs {
+    float: left;
+    width: 300px;
 }
 
-.navigation ul li:hover {
-    background-color: rgba(143, 143, 143, 0.422);
+input[type="text"],
+input[type="email"] {
+    border: solid 1px #aaa;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
 }
 
-.navigation ul li.active {
-    background-color: rgb(128, 128, 128);
+textarea {
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    height: 160px;
+    width: 300px;
+    font-size: 15px;
 }
 
-.navigation ul li.active::before {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -30px;
-    right: 0;
-    border-radius: 50%;
-    box-shadow: 15px 15px  rgb(128, 128, 128);
-}
-
-.navigation ul li.active::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 60px;
-    right: 0;
-    border-radius: 50%;
-    box-shadow: 15px -15px  rgb(128, 128, 128);
-}
-
-.navigation ul li a {
-    text-decoration:    none;
-    color: black;
-    width: 100%;
-    display: flex;
-    position: relative;
-}
-
-.navigation ul li a .icon {
-    display: block;
-    min-width: 45px;
-    height: 60px;
-    line-height: 70px;
+.button-area {
     text-align: center;
 }
 
-.navigation ul li a .icon ion-icon {
-    font-size: 1.5rem;
+input[type="submit"] {
+    background: black;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
 }
 
-.navigation ul li a .title {
-    padding-left: 10px;
-    height: 60px;
-    line-height: 60px;
-    white-space: nowrap;
-}
+input[type="reset"] {
+    background: rgb(128, 128, 128);
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
 
-
-
-
-.footer ul {
-    display: flex;
-}
-
-.footer ul li {
-    padding: 0 15px;
-    line-height: 1.2;
-     /* color: #fff; */
-    text-transform: uppercase;
+    cursor: pointer;
 }
