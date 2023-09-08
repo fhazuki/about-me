@@ -95,8 +95,8 @@
     white-space: nowrap;
 }
 
-@media screen and (min-width = 768px) {
+@media screen and (max-width: 768px) {
     .side {
-        position: fixed;
+        display: none;
     }
 }

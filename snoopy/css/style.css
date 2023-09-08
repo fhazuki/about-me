@@ -75,6 +75,14 @@ section {
     margin-bottom: 70px;
 }
 
-/* @media (min-width: ) {
+@media screen and (max-width: 800px) {
+    .container-2 {
+        display: block;
+        max-width: 70%;
+    }
 
-} */
+    img {
+        max-width: 90%;
+        height: auto;
+    }
+}
